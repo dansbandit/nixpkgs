@@ -25,7 +25,7 @@ python3Packages.buildPythonApplication rec {
   propagatedBuildInputs = [ python3Packages.pymupdf ];
 
   nativeCheckInputs = with python3Packages; [
-    tox
+    # tox
     pymupdf
     pytest
     pytest-console-scripts
@@ -36,9 +36,9 @@ python3Packages.buildPythonApplication rec {
   disabledTests = [
     "tests"
     # touches network
-    # "test_toc_pipe"
-    # "test_toc_show"
-    # "test_toc_write"
+    "test_toc_pipe"
+    "test_toc_show"
+    "test_toc_write"
   ];
 
   # pythonImportsCheck = [ "pdf_toc" ];
